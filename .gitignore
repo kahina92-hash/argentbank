@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Build / dist
+dist/
+build/
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+
+# Backend node modules
+backend/ArgentBank-Backend/node_modules/
+
+# Frontend node modules
+frontend/ArgentBank-Frontend/mon-application/node_modules/
