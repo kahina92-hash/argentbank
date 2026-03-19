@@ -1,25 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Utilisez Router ici
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Error from "./pages/Error"
+import Home from "./pages/Home"
+import Profile from "./pages/Profile"
+import SignIn from "./pages/SignIn"
+import SharedLayout from "./pages/SharedLayout"
 
-import Header from './components/Header/Header';
-import { Home } from './Pages/Home/Home';
-import Login from './Pages/login/LogIn';
-import Profile from './Pages/Profile/Profile';
 function App() {
-    // const isConnected = useSelector((state) => state.auth.isConnected);
-
-    return (
-        <Router> {/* Ajoutez Router ici */}
-            <div>
-                <Header />
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/login' element={<Login />} />
-                    <Route path='/Profile' element={<Profile />} />
-                </Routes>
-            </div>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </Router>
+  )
 }
 
-export default App;
+export default App

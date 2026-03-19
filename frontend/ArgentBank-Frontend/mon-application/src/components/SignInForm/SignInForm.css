@@ -1,0 +1,17 @@
+/* SignInForm.css */
+.errmsg {
+  color: red;
+  font-weight: bold;
+  transition: opacity 0.3s, height 0.3s;
+}
+
+.errmsg.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.errmsg.visible {
+  opacity: 1;
+  height: auto;
+}
