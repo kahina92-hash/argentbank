@@ -1,11 +1,11 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  video: true, // ✅ OBLIGATOIRE
+
   e2e: {
     setupNodeEvents(on, config) {
-      // ici tu peux ajouter des plugins si besoin
+      return config;
     },
-
-    video: true, // ✅ ICI (bon endroit)
   },
 });
